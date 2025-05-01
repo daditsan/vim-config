@@ -3,36 +3,35 @@ My personal Vim configuration. Feel free to use.
 ## Prerequisites
 
 1. **Install Vim**:
-   Ensure that you have Vim installed on your system. It's mostly pre-built in every systems but you can also download it from the official [Vim website](https://www.vim.org/download.php), or install it using your system's package manager.
-
+   Ensure that you have Vim installed on your system.
+    It's mostly pre-built in every systems but you can also download it from the official [Vim website](https://www.vim.org/download.php),</br>
+    or install it using your system's package manager.
    - For **Ubuntu/Debian**:
      ```bash
      sudo apt install vim
      ```
-
    - For **macOS** (via Homebrew):
      ```bash
      brew install vim
      ```
-
-2. **Install vim-plug** (Plugin Manager):
-   This configuration uses [vim-plug](https://github.com/junegunn/vim-plug) as the plugin manager. To install vim-plug, run the following command:
-
+3. **Install vim-plug** (Plugin Manager):
+   This configuration uses [vim-plug](https://github.com/junegunn/vim-plug) as the plugin manager.</br>
+   To install vim-plug, run the following command:
    ```bash
    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
    ```
-
-3. **Recommended** Install **Node.js**:
-   This is optional configuration uses [node.js](https://nodejs.org/en) it's required to use Prettier in Vim. To install Node.js, download it from it's official website or click [here](https://nodejs.org/en/download/).
-
-4. **Recommended** Install **prettier** (Code Formatter):
-   This is optional configuration uses NPM to install. [prettier](https://prettier.io/)
+4. **Recommended** Install **Node.js**:
+   This is optional configuration uses [node.js](https://nodejs.org/en) it's required to use Prettier in Vim.</br>
+   To install Node.js, download it from it's official website or click [here](https://nodejs.org/en/download/).
+5. **Recommended** Install **prettier** (Code Formatter):
+   This is optional configuration uses NPM to install. [prettier](https://prettier.io/)</br>
   **Make sure you have node.js installed** check by running this command:
 ```bash
 node -v
 ```
-and check your NPM (Node Package Manager) version. By default NPM is bundled inside Node.js installation. Check by running this command:
+and check your NPM (Node Package Manager) version. By default NPM is bundled inside Node.js installation.</br>
+Check by running this command:
 ```bash
 npm -v
 ```
@@ -42,8 +41,10 @@ npm i -g prettier
 ```
 
 ## .vimrc
-*.vimrc* is the configuration file for Vim. This single file alone can customised your whole Vim experience.
-It mostly located in user's home directory path or *~*. Hidden in the home directory by default.
+*.vimrc* is the configuration file for Vim.</br>
+This single file alone can customised your whole Vim experience.
+It mostly located in user's home directory path or *~*</br>
+Hidden in the home directory by default.</br></br>
 If you can't find it, proceed to create it. Go to Home directory by running this in terminal:
 ```bash
 cd
@@ -191,8 +192,8 @@ autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.json,*.css,*.scss,*.md,*.html :silen
 
 ```
 
-After paste the content to .vimrc save the file, and restart Vim.
-After that Install the registered plugins in .vimrc by running this command in Vim, just type it:
+- After paste the content to .vimrc save the file and quit Vim.
+- Re-open Vim to install the registered plugins in .vimrc by and running this command, just type it:
 ```vim
 :PlugInstall
 ```
