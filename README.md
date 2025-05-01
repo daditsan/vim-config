@@ -3,9 +3,8 @@ My personal Vim configuration. Feel free to use.
 ## Prerequisites
 
 1. **Install Vim**:
-   Ensure that you have Vim installed on your system.
-    It's mostly pre-built in every systems but you can also download it from the official [Vim website](https://www.vim.org/download.php),</br>
-    or install it using your system's package manager.
+   Ensure that you have Vim installed on your system. It's mostly pre-built in every systems</br>
+   but you can also download it from the official [Vim website](https://www.vim.org/download.php), or install it using your system's package manager.
    - For **Ubuntu/Debian**:
      ```bash
      sudo apt install vim
