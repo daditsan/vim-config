@@ -42,7 +42,7 @@ npm i -g prettier
 ```
 
 ## .vimrc
-*.vimrc* is the congiuration file for Vim. This one file can customised your Vim experience.
+*.vimrc* is the configuration file for Vim. This single file alone can customised your whole Vim experience.
 It mostly located in user's home directory path or *~*. Hidden in the home directory by default.
 If you can't find it, proceed to create it. Go to Home directory by running this in terminal:
 ```bash
@@ -109,29 +109,46 @@ set statusline=%f\ %y\ %m%r%=%-14.(%l,%c%V%)\ %P
 call plug#begin('~/.vim/plugged')
 
 " Plugin List
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'wakatime/vim-wakatime'              " Wakatime time tracking. Vim needs to configured with Wakatime API Key
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder (FZF). 
-Plug 'junegunn/fzf.vim'                   " FZF integration in Vim. See keybind setup below.
-Plug 'github/copilot.vim'                 " GitHub Copilot integration. Needs to be configured with API Key
+Plug 'junegunn/fzf.vim' " FZF integration in Vim. See keybind setup below.
+
+" Optional but Recommended Plugin List (Uncomment the quote symbol below to use)
+" Plug 'neoclide/coc.nvim', {'branch': 'release'} " Adds IntelliSense-like in Visual Studio Code
+" Plug 'github/copilot.vim' " GitHub Copilot integration. Needs to be configured with API Key
+" Plug 'wakatime/vim-wakatime' " Wakatime Time Tracker. Needs to configured with API Key
 
 " End plugin block
 call plug#end()
 
 " Keybindings & Custom Mappings
 " ===============================
+" Enable and disable keybind and mappings with add and remove the quote symbol.
+
+" COC.nvim suggestions pop-up menu keybindings (optional, only enable if you want to
+" use COC.nvim)
+" inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<C-h>"
+" inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<CR>"
 
 " Use <leader>e to open Vim's built-in file explorer (netrw)
-nnoremap <leader>e :Vex<CR>
+nnoremap <leader>e :Ex<CR>
 
-" Disable Copilot's default tab mapping (optional)
-let g:copilot_no_tab_map = v:true
+" Cycle Copilot suggestions (optional, only enable if you want to
+" use Copilot)
+" imap <C-j> <Plug>(copilot-next)
+" imap <C-k> <Plug>(copilot-previous)
 
-" Use Ctrl-J to accept Copilot suggestion
-imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+" Disable Copilot's default tab mapping (optional, only enable if you want to
+" use Copilot)
+" let g:copilot_no_tab_map = v:true
 
-" Suggestion delay (optional)
-let g:copilot_idle_delay = 100
+" Use Ctrl-l to accept Copilot suggestion (optional, only enable if you want to
+" use Copilot)
+" imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
+
+" Suggestion delay (optional, only enable if you want to
+" use Copilot)
+" let g:copilot_idle_delay = 100
 
 " Close a current buffer with <leader>e
 nnoremap <leader>x :bd<CR>
@@ -168,8 +185,11 @@ vnoremap <leader>k :m '<-2<CR>gv=gv
 " End of configuration
 " ===============================
 
-" Enable format code text with coc-prettier on save (:w)
+" Enable format code text with coc-prettier on save (:w) (optional, only enable if you want to
+" use Prettier)
 autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.json,*.css,*.scss,*.md,*.html :silent! CocCommand prettier.formatFile
+
+
 
 ```
 
