@@ -124,8 +124,8 @@ call plug#end()
 " ===============================
 " Enable and disable keybind and mappings with add and remove the quote symbol.
 
-" COC.nvim suggestions pop-up menu keybindings (optional, only enable if you want to
-" use COC.nvim)
+" COC.nvim suggestions pop-up menu keybindings with Tab or Shift-Tab
+" (Optional, only enable if you want to use COC.nvim)
 " inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 " inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<C-h>"
 " inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<CR>"
@@ -133,27 +133,27 @@ call plug#end()
 " Use <leader>e to open Vim's built-in file explorer (netrw)
 nnoremap <leader>e :Ex<CR>
 
-" Cycle Copilot suggestions (optional, only enable if you want to
-" use Copilot)
+" Cycle Copilot suggestions with Ctrl+j or Ctrl+k
+" (Optional, only enable if you want to use Copilot)
 " imap <C-j> <Plug>(copilot-next)
 " imap <C-k> <Plug>(copilot-previous)
 
-" Disable Copilot's default tab mapping (optional, only enable if you want to
-" use Copilot)
+" Disable Copilot's default Tab key mapping to accept suggestion
+" (Optional, only enable if you want to use Copilot)
 " let g:copilot_no_tab_map = v:true
 
-" Use Ctrl-l to accept Copilot suggestion (optional, only enable if you want to
-" use Copilot)
+" Use Ctrl-l to accept Copilot suggestion
+" (Optional, only enable if you want to use Copilot)
 " imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
 
-" Suggestion delay (optional, only enable if you want to
-" use Copilot)
+" Copilot Suggestion delay
+" (Optional, only enable if you want to use Copilot)
 " let g:copilot_idle_delay = 100
 
 " Close a current buffer with <leader>e
 nnoremap <leader>x :bd<CR>
 
-" Escape key mappings
+" Escape key mappings, convenient to exit Vim's Terminal mode with esc
 nnoremap <Esc> :nohlsearch<CR>
 tnoremap <Esc> <C-\><C-n>
 
@@ -185,11 +185,9 @@ vnoremap <leader>k :m '<-2<CR>gv=gv
 " End of configuration
 " ===============================
 
-" Enable format code text with coc-prettier on save (:w) (optional, only enable if you want to
-" use Prettier)
+" Enable format code text with coc-prettier on save (:w)
+" (Optional, only enable if you want to use Prettier)
 autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.json,*.css,*.scss,*.md,*.html :silent! CocCommand prettier.formatFile
-
-
 
 ```
 
