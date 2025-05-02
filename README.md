@@ -1,10 +1,19 @@
-My personal Vim configuration. Feel free to use.
+*My personal Vim configuration. Feel free to use. This is the most beginner friendly setup i found so far.*
+
+___
+
+<div align="center">
+   <img width=250 height=250 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/1200px-Vimlogo.svg.png">
+</div>
+
+___
 
 ## Prerequisites
 
 1. **Install Vim**:
-   Ensure that you have Vim installed on your system. It's mostly pre-built in every systems</br>
-   but you can also download it from the official [Vim website](https://www.vim.org/download.php), or install it using your system's package manager.
+   Ensure that you have Vim installed on your system.
+   > It's mostly pre-built in every systems</br>
+   >> but you can also download it from the official [Vim website](https://www.vim.org/download.php), or install it using your system's package manager.
    - For **Ubuntu/Debian**:
      ```bash
      sudo apt install vim
@@ -21,7 +30,7 @@ My personal Vim configuration. Feel free to use.
    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
    ```
 4. **Recommended** Install **Node.js**:
-   This is optional configuration uses [node.js](https://nodejs.org/en) it's required to use Prettier in Vim.</br>
+   This is optional configuration uses [node.js](https://nodejs.org/en), it's required to use Prettier in Vim.</br>
    To install Node.js, download it from it's official website or click [here](https://nodejs.org/en/download/).
 5. **Recommended** Install **prettier** (Code Formatter):
    This is optional configuration uses NPM to install. [prettier](https://prettier.io/)</br>
@@ -41,9 +50,8 @@ npm i -g prettier
 
 ## .vimrc
 *.vimrc* is the configuration file for Vim.</br>
-This single file alone can customised your whole Vim experience.
-It mostly located in user's home directory path or *~*</br>
-Hidden in the home directory by default.</br></br>
+> This single file alone can customised your whole Vim experience.
+>> It mostly located in user's home directory path or *~*  it's hidden in the home directory by default.
 If you can't find it, proceed to create it. Go to Home directory by running this in terminal:
 ```bash
 cd
@@ -232,3 +240,4 @@ and paste this syntax below to set Prettier as your formatter:
 Save it.
 
 ### 3. Restart Vim, You're all set!
+___
