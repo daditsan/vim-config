@@ -117,51 +117,50 @@ set statusline=%f\ %y\ %m%r%=%-14.(%l,%c%V%)\ %P
 call plug#begin('~/.vim/plugged')
 
 " Plugin List
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'wakatime/vim-wakatime'              " Wakatime time tracking. Vim needs to configured with Wakatime API Key
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder (FZF). 
-Plug 'junegunn/fzf.vim' " FZF integration in Vim. See keybind setup below.
-
-" Optional but Recommended Plugin List (Uncomment the quote symbol below to use)
-" Plug 'neoclide/coc.nvim', {'branch': 'release'} " Adds IntelliSense-like in Visual Studio Code
-" Plug 'github/copilot.vim' " GitHub Copilot integration. Needs to be configured with API Key
-" Plug 'wakatime/vim-wakatime' " Wakatime Time Tracker. Needs to configured with API Key
+Plug 'junegunn/fzf.vim'                   " FZF integration in Vim. See keybind setup below.
+Plug 'github/copilot.vim'                 " GitHub Copilot integration. Needs to be configured with API Key
 
 " End plugin block
 call plug#end()
 
 " Keybindings & Custom Mappings
 " ===============================
-" Enable and disable keybind and mappings with add and remove the quote symbol.
 
-" COC.nvim suggestions pop-up menu keybindings with Tab or Shift-Tab
-" (Optional, only enable if you want to use COC.nvim)
-" inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-" inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<C-h>"
-" inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<CR>"
+" COC.nvim keybindings
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<CR>"
+
+" Prettier formatting, format code with <leader>p
+nnoremap <leader>p :CocCommand prettier.formatFile<CR>
 
 " Use <leader>e to open Vim's built-in file explorer (netrw)
 nnoremap <leader>e :Ex<CR>
 
-" Cycle Copilot suggestions with Ctrl+j or Ctrl+k
-" (Optional, only enable if you want to use Copilot)
-" imap <C-j> <Plug>(copilot-next)
-" imap <C-k> <Plug>(copilot-previous)
+" Cycle Copilot suggestions
+imap <C-j> <Plug>(copilot-next)
+imap <C-k> <Plug>(copilot-previous)
 
-" Disable Copilot's default Tab key mapping to accept suggestion
-" (Optional, only enable if you want to use Copilot)
-" let g:copilot_no_tab_map = v:true
+" Disable Copilot's default tab mapping (optional only enable if you want to
+" use Copilot)
+let g:copilot_no_tab_map = v:true
 
 " Use Ctrl-l to accept Copilot suggestion
-" (Optional, only enable if you want to use Copilot)
-" imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
+imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
 
-" Copilot Suggestion delay
-" (Optional, only enable if you want to use Copilot)
-" let g:copilot_idle_delay = 100
+" Suggestion delay (optional)
+let g:copilot_idle_delay = 100
+
+" Open a new empty buffer with <leader>n
+nnoremap <leader>n :enew<CR>
 
 " Close a current buffer with <leader>e
 nnoremap <leader>x :bd<CR>
 
-" Escape key mappings, convenient to exit Vim's Terminal mode with esc
+" Escape key mappings
 nnoremap <Esc> :nohlsearch<CR>
 tnoremap <Esc> <C-\><C-n>
 
@@ -178,9 +177,6 @@ nmap <S-Tab> :bp<CR>
 " Open terminal with <leader>t
 nnoremap <leader>t :term<CR>
 
-" Search & Replace word under cursor with <leader>r
-nnoremap <leader>r :let word = expand('<cword>')<CR>:let replacement = input('Replace "' . word . '" with: ')<CR>:if replacement != ""<CR>:execute ':%s/\<' . word . '\>/' . replacement . '/g'<CR>:endif<CR>
-
 " Move lines up and down with <leader>j/k
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
@@ -192,10 +188,6 @@ vnoremap <leader>k :m '<-2<CR>gv=gv
 " ===============================
 " End of configuration
 " ===============================
-
-" Enable format code text with coc-prettier on save (:w)
-" (Optional, only enable if you want to use Prettier)
-autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.json,*.css,*.scss,*.md,*.html :silent! CocCommand prettier.formatFile
 
 ```
 
