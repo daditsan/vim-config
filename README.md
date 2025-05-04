@@ -118,10 +118,12 @@ call plug#begin('~/.vim/plugged')
 
 " Plugin List
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'wakatime/vim-wakatime'              " Wakatime time tracking. Vim needs to configured with Wakatime API Key
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Fuzzy finder (FZF). 
 Plug 'junegunn/fzf.vim'                   " FZF integration in Vim. See keybind setup below.
-Plug 'github/copilot.vim'                 " GitHub Copilot integration. Needs to be configured with API Key
+
+" Optional Plugins but Recommended. (Uncomment to enable)
+" Plug 'wakatime/vim-wakatime'              " Wakatime time tracking. Vim needs to configured with Wakatime API Key
+" Plug 'github/copilot.vim'                 " GitHub Copilot integration. Needs to be configured with API Key
 
 " End plugin block
 call plug#end()
@@ -140,19 +142,18 @@ nnoremap <leader>p :CocCommand prettier.formatFile<CR>
 " Use <leader>e to open Vim's built-in file explorer (netrw)
 nnoremap <leader>e :Ex<CR>
 
-" Cycle Copilot suggestions
-imap <C-j> <Plug>(copilot-next)
-imap <C-k> <Plug>(copilot-previous)
+" Disable Copilot's default tab mapping (Optional, only enable if you use Copilot) 
+" let g:copilot_no_tab_map = v:true
 
-" Disable Copilot's default tab mapping (optional only enable if you want to
-" use Copilot)
-let g:copilot_no_tab_map = v:true
+" Cycle Copilot suggestions (Optional, uncomment to enable)
+" imap <C-j> <Plug>(copilot-next)
+" imap <C-k> <Plug>(copilot-previous)
 
-" Use Ctrl-l to accept Copilot suggestion
-imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
+" Use Ctrl-l to accept Copilot suggestion (Optional, only enable if you use Copilot) 
+" imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
 
-" Suggestion delay (optional)
-let g:copilot_idle_delay = 100
+" Suggestion delay (Optional, only enable if you use Copilot) 
+" let g:copilot_idle_delay = 100
 
 " Open a new empty buffer with <leader>n
 nnoremap <leader>n :enew<CR>
