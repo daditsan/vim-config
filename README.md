@@ -145,7 +145,7 @@ nnoremap <leader>e :Ex<CR>
 " Disable Copilot's default tab mapping (Optional, only enable if you use Copilot) 
 " let g:copilot_no_tab_map = v:true
 
-" Cycle Copilot suggestions (Optional, uncomment to enable)
+" Cycle Copilot suggestions (Optional, only enable if you use Copilot) 
 " imap <C-j> <Plug>(copilot-next)
 " imap <C-k> <Plug>(copilot-previous)
 
