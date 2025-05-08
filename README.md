@@ -1,4 +1,4 @@
-*My personal Vim configuration. Feel free to use. This is the most beginner friendly setup i found so far. Tested in MacOS Built-in Terminal with default setup.*
+*My personal Vim configuration. Feel free to use. This is the most beginner friendly setup i found so far. Tested in MacOS Built-in Terminal with its default setup.*
 
 ___
 
