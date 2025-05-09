@@ -1,4 +1,7 @@
-*My personal Vim configuration. Feel free to use. This is the most beginner friendly setup i found so far. Tested in MacOS Built-in Terminal with its default setup.*
+*My personal Vim configuration. Feel free to use. This is the most beginner friendly setup i found so far.* </br>
+Tested in: 
+- MacOS Sequoia (15.4.1), MacOS Default/Built-in Terminal with its factory setup.
+- Arch Linux, Alacritty Terminal Emulator + Tmux + zsh Shell. 
 
 ___
 
@@ -11,16 +14,22 @@ ___
 ## Prerequisites
 
 1. **Install Vim**:
-   Ensure that you have Vim installed on your system.
-   > It's mostly pre-built in every systems</br>
-   >> but you can also download it from the official [Vim website](https://www.vim.org/download.php), or install it using your system's package manager.
+   Ensure that you have Vim installed on your system, and make sure to use the **latest version**.
+   > It's mostly pre-built in every systems. Though could be not the latest version.</br>
+   >> You can download it from the official [Vim website](https://www.vim.org/download.php), make sure to get the latest version. Or you can also install it using your system's package manager.
    - For **Ubuntu/Debian**:
      ```bash
+     sudo apt update
      sudo apt install vim
+     ```
+   - For **Fedora/RHEL**:
+     ```bash
+     sudo dnf update vim
      ```
    - For **macOS** (via Homebrew):
      ```bash
-     brew install vim
+     brew update
+     brew upgrade vim
      ```
 3. **Install vim-plug** (Plugin Manager):
    This configuration uses [vim-plug](https://github.com/junegunn/vim-plug) as the plugin manager.</br>
