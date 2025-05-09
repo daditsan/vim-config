@@ -1,4 +1,4 @@
-*My personal Vim configuration. Feel free to use. This is the most beginner friendly setup i found so far.* </br>
+*My personal Vim configuration. Feel free to use. This is the most beginner friendly setup i found so far.* </br></br>
 Tested in: 
 - MacOS Sequoia (15.4.1), MacOS Default/Built-in Terminal with its factory setup.
 - Arch Linux, Alacritty Terminal Emulator + Tmux + zsh Shell. 
