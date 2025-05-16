@@ -6,7 +6,7 @@ Tested in:
 ___
 
 <div align="center">
-   <img width=250 height=250 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/1200px-Vimlogo.svg.png">
+   <img width=150 height=150 src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/1200px-Vimlogo.svg.png">
 </div>
 
 ___
@@ -14,9 +14,16 @@ ___
 ## Prerequisites
 
 1. **Install Vim**:
-   Ensure that you have Vim installed on your system, and make sure to use the **latest version**.
-   > It's mostly pre-built in every systems. Though could be not the latest version.</br>
-   >> You can download it from the official [Vim website](https://www.vim.org/download.php), make sure to get the latest version. Or you can also install it using your system's package manager.
+   Ensure that you have Vim installed on your system, and make sure to use the **latest version**.</br>
+   Check it by running this command:
+   ```bash
+   vim --version
+   ```
+   You'll see the detailed information about your Vim installed in your machine.</br>
+   If Vim ins't installed, it will just show something like `command not found: vim` </br>
+   > It's mostly pre-built in every systems. Though could be not the latest or the desired version _(huge version)_.</br>
+   >> The best of Vim version is the huge version with +Clipboard feature available. _But how to get some features available is depend on how Vim was compiled in your system._
+   >>> You can download it from the official [Vim website](https://www.vim.org/download.php), make sure to get the latest version. Or you can also install it using your system's package manager.
    - For **Ubuntu/Debian**:
      ```bash
      sudo apt update
