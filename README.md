@@ -144,6 +144,23 @@ Plug 'junegunn/fzf.vim'                   " FZF integration in Vim. See keybind 
 " End plugin block
 call plug#end()
 
+" ===============================
+" UI Customization: CoC popup colors
+" ===============================
+" Fixes unreadable suggestions and annoying magenta match color.
+" This only applies if you're not using any Vim's colorscheme.
+" Check inside Vim by running :colorscheme , if it returns default,
+" You're good to go. Or else, don't uncomment this part below.
+" Use autocommand so it persists across colorscheme changes (future-proof)
+" highlight Pmenu       guibg=#2a2a2a guifg=#cccccc
+" highlight PmenuSel    guibg=#44475a guifg=#ffffff gui=bold
+" highlight PmenuSbar   guibg=#3e3e3e
+" highlight PmenuThumb  guibg=#5e5e5e
+" highlight CocMenuSel  guibg=#44475a guifg=#ffffff gui=bold
+" highlight CocSearch   guifg=#ffb86c gui=bold
+" highlight PmenuKind   guifg=#8be9fd guibg=#2a2a2a
+" highlight PmenuExtra  guifg=#6272a4 guibg=#2a2a2a
+
 " Keybindings & Custom Mappings
 " ===============================
 
